@@ -1,0 +1,86 @@
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}                                                           & search\_or\_frisk\_vehicle & \textbf{  R-squared:         } &     0.078   \\
+\textbf{Model:}                                                                   &            OLS             & \textbf{  Adj. R-squared:    } &     0.077   \\
+\textbf{Method:}                                                                  &       Least Squares        & \textbf{  F-statistic:       } &     386.0   \\
+\textbf{Date:}                                                                    &      Sat, 11 Feb 2023      & \textbf{  Prob (F-statistic):} &     0.00    \\
+\textbf{Time:}                                                                    &          19:01:07          & \textbf{  Log-Likelihood:    } &   -21832.   \\
+\textbf{No. Observations:}                                                        &           264720           & \textbf{  AIC:               } & 4.377e+04   \\
+\textbf{Df Residuals:}                                                            &           264665           & \textbf{  BIC:               } & 4.435e+04   \\
+\textbf{Df Model:}                                                                &               54           & \textbf{                     } &             \\
+\textbf{Covariance Type:}                                                         &            HC3             & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                                                                                  & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{Intercept}                                                                &       0.0379  &        0.006     &     5.853  &         0.000        &        0.025    &        0.051     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.American Indian]}    &      -0.0281  &        0.003     &    -8.871  &         0.000        &       -0.034    &       -0.022     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.Asian]}              &      -0.0168  &        0.002     &    -8.728  &         0.000        &       -0.021    &       -0.013     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.Black - Latino]}     &      -0.0149  &        0.004     &    -3.752  &         0.000        &       -0.023    &       -0.007     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.Black - Non-Latino]} &       0.0275  &        0.001     &    21.670  &         0.000        &        0.025    &        0.030     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.Unknown]}            &      -0.0117  &        0.003     &    -3.717  &         0.000        &       -0.018    &       -0.006     \\
+\textbf{C(race, Treatment(reference='White - Non-Latino'))[T.White - Latino]}     &       0.0032  &        0.002     &     1.563  &         0.118        &       -0.001    &        0.007     \\
+\textbf{C(gender)[T.Male]}                                                        &       0.0624  &        0.001     &    65.114  &         0.000        &        0.061    &        0.064     \\
+\textbf{C(weekday)[T.MONDAY]}                                                     &       0.0008  &        0.002     &     0.431  &         0.667        &       -0.003    &        0.004     \\
+\textbf{C(weekday)[T.SATURDAY]}                                                   &      -0.0060  &        0.002     &    -3.221  &         0.001        &       -0.010    &       -0.002     \\
+\textbf{C(weekday)[T.SUNDAY]}                                                     &      -0.0055  &        0.002     &    -2.817  &         0.005        &       -0.009    &       -0.002     \\
+\textbf{C(weekday)[T.THURSDAY]}                                                   &       0.0139  &        0.002     &     7.506  &         0.000        &        0.010    &        0.017     \\
+\textbf{C(weekday)[T.TUESDAY]}                                                    &       0.0158  &        0.002     &     8.576  &         0.000        &        0.012    &        0.019     \\
+\textbf{C(weekday)[T.WEDNESDAY]}                                                  &       0.0182  &        0.002     &     9.937  &         0.000        &        0.015    &        0.022     \\
+\textbf{C(month)[T.2]}                                                            &    1.646e-05  &        0.003     &     0.006  &         0.995        &       -0.005    &        0.005     \\
+\textbf{C(month)[T.3]}                                                            &      -0.0028  &        0.003     &    -1.046  &         0.295        &       -0.008    &        0.002     \\
+\textbf{C(month)[T.4]}                                                            &      -0.0141  &        0.003     &    -5.308  &         0.000        &       -0.019    &       -0.009     \\
+\textbf{C(month)[T.5]}                                                            &      -0.0157  &        0.003     &    -6.002  &         0.000        &       -0.021    &       -0.011     \\
+\textbf{C(month)[T.6]}                                                            &      -0.0250  &        0.003     &    -9.608  &         0.000        &       -0.030    &       -0.020     \\
+\textbf{C(month)[T.7]}                                                            &      -0.0166  &        0.003     &    -6.204  &         0.000        &       -0.022    &       -0.011     \\
+\textbf{C(month)[T.8]}                                                            &      -0.0137  &        0.003     &    -5.067  &         0.000        &       -0.019    &       -0.008     \\
+\textbf{C(month)[T.9]}                                                            &      -0.0192  &        0.003     &    -7.070  &         0.000        &       -0.025    &       -0.014     \\
+\textbf{C(month)[T.10]}                                                           &      -0.0156  &        0.003     &    -5.787  &         0.000        &       -0.021    &       -0.010     \\
+\textbf{C(month)[T.11]}                                                           &      -0.0191  &        0.003     &    -6.967  &         0.000        &       -0.024    &       -0.014     \\
+\textbf{C(month)[T.12]}                                                           &      -0.0247  &        0.003     &    -9.294  &         0.000        &       -0.030    &       -0.019     \\
+\textbf{C(year)[T.2022]}                                                          &      -0.0313  &        0.001     &   -30.083  &         0.000        &       -0.033    &       -0.029     \\
+\textbf{C(year)[T.2023]}                                                          &      -0.0337  &        0.003     &    -9.684  &         0.000        &       -0.041    &       -0.027     \\
+\textbf{C(districtoccur)[T.2]}                                                    &       0.0216  &        0.006     &     3.585  &         0.000        &        0.010    &        0.033     \\
+\textbf{C(districtoccur)[T.3]}                                                    &      -0.0376  &        0.005     &    -7.036  &         0.000        &       -0.048    &       -0.027     \\
+\textbf{C(districtoccur)[T.5]}                                                    &      -0.0296  &        0.006     &    -4.948  &         0.000        &       -0.041    &       -0.018     \\
+\textbf{C(districtoccur)[T.6]}                                                    &      -0.0373  &        0.005     &    -7.097  &         0.000        &       -0.048    &       -0.027     \\
+\textbf{C(districtoccur)[T.7]}                                                    &      -0.0400  &        0.005     &    -7.641  &         0.000        &       -0.050    &       -0.030     \\
+\textbf{C(districtoccur)[T.8]}                                                    &      -0.0470  &        0.005     &    -8.920  &         0.000        &       -0.057    &       -0.037     \\
+\textbf{C(districtoccur)[T.9]}                                                    &      -0.0371  &        0.005     &    -6.923  &         0.000        &       -0.048    &       -0.027     \\
+\textbf{C(districtoccur)[T.12]}                                                   &      -0.0038  &        0.005     &    -0.716  &         0.474        &       -0.014    &        0.007     \\
+\textbf{C(districtoccur)[T.14]}                                                   &       0.1029  &        0.006     &    17.165  &         0.000        &        0.091    &        0.115     \\
+\textbf{C(districtoccur)[T.15]}                                                   &      -0.0198  &        0.005     &    -3.709  &         0.000        &       -0.030    &       -0.009     \\
+\textbf{C(districtoccur)[T.16]}                                                   &      -0.0225  &        0.006     &    -4.032  &         0.000        &       -0.033    &       -0.012     \\
+\textbf{C(districtoccur)[T.17]}                                                   &      -0.0071  &        0.006     &    -1.298  &         0.194        &       -0.018    &        0.004     \\
+\textbf{C(districtoccur)[T.18]}                                                   &       0.0163  &        0.005     &     2.968  &         0.003        &        0.006    &        0.027     \\
+\textbf{C(districtoccur)[T.19]}                                                   &       0.0001  &        0.006     &     0.026  &         0.979        &       -0.011    &        0.011     \\
+\textbf{C(districtoccur)[T.22]}                                                   &      -0.0247  &        0.006     &    -4.493  &         0.000        &       -0.036    &       -0.014     \\
+\textbf{C(districtoccur)[T.24]}                                                   &       0.0674  &        0.006     &    11.735  &         0.000        &        0.056    &        0.079     \\
+\textbf{C(districtoccur)[T.25]}                                                   &       0.0481  &        0.006     &     8.497  &         0.000        &        0.037    &        0.059     \\
+\textbf{C(districtoccur)[T.26]}                                                   &       0.0085  &        0.006     &     1.310  &         0.190        &       -0.004    &        0.021     \\
+\textbf{C(districtoccur)[T.35]}                                                   &       0.0567  &        0.006     &     9.508  &         0.000        &        0.045    &        0.068     \\
+\textbf{C(districtoccur)[T.39]}                                                   &       0.0420  &        0.006     &     7.544  &         0.000        &        0.031    &        0.053     \\
+\textbf{C(districtoccur)[T.77]}                                                   &       0.0151  &        0.010     &     1.556  &         0.120        &       -0.004    &        0.034     \\
+\textbf{C(stoptype)[T.vehicle]}                                                   &       0.1049  &        0.001     &   116.571  &         0.000        &        0.103    &        0.107     \\
+\textbf{C(age\_group)[T.19-25]}                                                   &      -0.0708  &        0.004     &   -19.861  &         0.000        &       -0.078    &       -0.064     \\
+\textbf{C(age\_group)[T.26-35]}                                                   &      -0.1118  &        0.003     &   -32.228  &         0.000        &       -0.119    &       -0.105     \\
+\textbf{C(age\_group)[T.36-45]}                                                   &      -0.1367  &        0.003     &   -39.241  &         0.000        &       -0.143    &       -0.130     \\
+\textbf{C(age\_group)[T.46-55]}                                                   &      -0.1520  &        0.003     &   -43.492  &         0.000        &       -0.159    &       -0.145     \\
+\textbf{C(age\_group)[T.56-64]}                                                   &      -0.1646  &        0.003     &   -47.258  &         0.000        &       -0.171    &       -0.158     \\
+\textbf{C(age\_group)[T.65+]}                                                     &      -0.1703  &        0.004     &   -47.411  &         0.000        &       -0.177    &       -0.163     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 140956.383 & \textbf{  Durbin-Watson:     } &     1.494   \\
+\textbf{Prob(Omnibus):} &    0.000   & \textbf{  Jarque-Bera (JB):  } & 737945.505  \\
+\textbf{Skew:}          &    2.693   & \textbf{  Prob(JB):          } &      0.00   \\
+\textbf{Kurtosis:}      &    9.156   & \textbf{  Cond. No.          } &      150.   \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors are heteroscedasticity robust (HC3)

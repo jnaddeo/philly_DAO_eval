@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Scientist Assessment</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="DAO_data_scientist_assessment_files/libs/clipboard/clipboard.min.js"></script>
+<script src="DAO_data_scientist_assessment_files/libs/quarto-html/quarto.js"></script>
+<script src="DAO_data_scientist_assessment_files/libs/quarto-html/popper.min.js"></script>
+<script src="DAO_data_scientist_assessment_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="DAO_data_scientist_assessment_files/libs/quarto-html/anchor.min.js"></script>
+<link href="DAO_data_scientist_assessment_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="DAO_data_scientist_assessment_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="DAO_data_scientist_assessment_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="DAO_data_scientist_assessment_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="DAO_data_scientist_assessment_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data Scientist Assessment</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="instructions" class="level1">
+<h1>Instructions</h1>
+<p>This is a skills assessment for the Data Scientist position with the <a href="https://phillyda.org/data-lab/">DATA Lab</a> in the <a href="https://phillyda.org/">Philadelphia District Attorney’s Office</a>.</p>
+<p>If within your skill set, respond to all prompts that you have experience with. While we provide these prompts to guide our decision on eligible candidates, this is not the only tool that we will use to make a decision.</p>
+<p>Please feel free to make decisions and take liberties about format, design, and utility based on your personal preferences; this reflects the flexibility and independence you will have in responding to requests in this position.</p>
+<p>Your answers should be written in R code that we would be able to load and run. We use RMarkdown and Quarto frequently, and so demonstrating utility of one of those would be useful as well. Your submission does not need to stand alone and “speak for itself” as you will have the opportunity to explain it during the interview.</p>
+<p>Your response should be submitted the day before your final interview.</p>
+<section id="scope" class="level2">
+<h2 class="anchored" data-anchor-id="scope">Scope</h2>
+<p>We expect this to take around 3-4 hours of your time.</p>
+<p>If you have any problems with completing these tasks, please email <a href="mailto:wes.weaver@phila.gov">Wes Weaver (wes.weaver@phila.gov)</a>.</p>
+</section>
+<section id="evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
+<p>During the final interview, you will be asked to show your submitted responses and explain the process you took in performing this assessment.</p>
+<p>Some questions do not have single “right” answers, and the final output format or deep understanding of the data is not of critical importance. Through this task, we are most interested in your ability to:</p>
+<ul>
+<li>Demonstrate use of common programmatic structures in R, including functions and tidy evaluation.</li>
+<li>Demonstrate your ability to design and explain research design.</li>
+<li>Understand how to convert theoretical models and convert them into statistical models.</li>
+</ul>
+</section>
+</section>
+<section id="section-1-research-design" class="level1">
+<h1>Section 1: Research Design</h1>
+<p>This section assesses each candidate’s understanding of relevant research design as associated with the criminal legal system</p>
+<section id="task-1" class="level2">
+<h2 class="anchored" data-anchor-id="task-1">Task 1:</h2>
+<blockquote class="blockquote">
+<p>There is published literature which suggests that housing improvements can reduce the number of criminal incidents in a given neighborhood. Assume that we would like to assess the effect of housing improvements on the number of shootings in a given neighborhood. Briefly describe how you would create a research project that assesses the impact of housing improvements and the reduction in shootings. In your answer, be sure to include a discussion of the following:</p>
+</blockquote>
+<ol type="1">
+<li>which research design(s) might be appropriate to understand the causal relationship (if any) between housing improvements and shootings.</li>
+<li>What method(s) would you consider or plan to use to investigate these questions?</li>
+<li>What limitations do you foresee in such an analsyis? Are there complementary research designs that could be conducted to mitigate them?</li>
+</ol>
+</section>
+</section>
+<section id="section-2-theory-to-practice" class="level1">
+<h1>Section 2: Theory to Practice</h1>
+<section id="task-2" class="level2">
+<h2 class="anchored" data-anchor-id="task-2">Task 2:</h2>
+<blockquote class="blockquote">
+<p>There is a large body of literature surrounding racial bias within the criminal legal system. Particularly, there is a robust literature related to the presence of racial bias (or lack thereof) when examining police stops and behavior. Within this task, you will be exploring whether racial bias exists within police <strong>vehicle</strong> search behavior in Philadelphia for 2021. Particularly, you will be assessing the impact race has on an individual’s likelihood to be searched.</p>
+</blockquote>
+<ol type="1">
+<li>Operating on the following DAG, construct an appropriate regression model using stop data from OpenDataPhilly. For your convenience, code to load the Philadelphia stop question and frisk data is provided below.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggdag)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>coords <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>name, <span class="sc">~</span>x,<span class="sc">~</span>y,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"searched"</span>, <span class="dv">1</span>,<span class="dv">1</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"race"</span>, <span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"location"</span>,<span class="dv">0</span>,<span class="dv">1</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdag</span>(<span class="fu">dagify</span>(searched<span class="sc">~</span>race,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>             race<span class="sc">~</span>location,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>             searched<span class="sc">~</span>location,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>             <span class="at">outcome =</span> <span class="st">"searched"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"searched"</span> <span class="ot">=</span> <span class="st">"searched"</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"race"</span> <span class="ot">=</span> <span class="st">"race of</span><span class="sc">\n</span><span class="st"> driver stopped"</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"location"</span> <span class="ot">=</span> <span class="st">"district</span><span class="sc">\n</span><span class="st"> occurred"</span>),<span class="at">coords =</span> coords),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>      <span class="at">text =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">use_labels =</span> <span class="st">"label"</span>)<span class="sc">+</span> </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_dag</span>()</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># PPD stops data for 2021.</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>philadelphia_stops <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://phl.carto.com/api/v2/sql?filename=car_ped_stops&amp;format=csv&amp;skipfields=cartodb_id,the_geom,the_geom_webmercator&amp;q=SELECT%20*,%20ST_Y(the_geom)%20AS%20lat,%20ST_X(the_geom)%20AS%20lng%20FROM%20car_ped_stops%20WHERE%20datetimeoccur%20%3E=%20%272021-01-01%27"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li><p>What comments would you have about the design or potential to make inferences from this model?</p></li>
+<li><p>An issue in the above DAG is that it ignored stop behavior for the police for the purpose of inference. Within the literature surrounding racial bias in policing, some researchers note issues in operationalizing racial bias in policing (See <a href="https://www.cambridge.org/core/journals/american-political-science-review/article/administrative-records-mask-racially-biased-policing/66BC0F9998543868BB20F241796B79B8">Knox,Lowe, and Mummolo, 2020</a> if interested). One approach proposed by <a href="https://www.rand.org/content/dam/rand/pubs/reprints/2007/RAND_RP1253.pdf">Grogger and Ridgeway, 2006</a> addresses this by understanding the difference between people stopped/searched during the day vs at night. Simplified, if the proportion of stops conducted towards a certain racial group differs from the proportion of stops conducted towards that racial group at night, then there is evidence of racial bias.</p></li>
+</ol>
+<p>Using the following DAG, generate an appropriate regression model with the veil of darkness in mind. For your convenience, datetimes for sunset and dusk as well as code to load the OpenDataPhilly criminal incidents data is provided. In your response, also explain your reasoning into the inclusion/exclusion of control variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdag</span>(<span class="fu">dagify</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  s <span class="sc">~</span> d,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  di<span class="sc">~</span>d,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  di<span class="sc">~</span>c,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  s <span class="sc">~</span>di,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  s <span class="sc">~</span> c,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">labels =</span> <span class="fu">c</span>(</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"s"</span> <span class="ot">=</span> <span class="st">"Prop. of Black </span><span class="sc">\n</span><span class="st"> drivers stopped"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"di"</span> <span class="ot">=</span> <span class="st">"Police </span><span class="sc">\n</span><span class="st"> District"</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"d"</span> <span class="ot">=</span> <span class="st">"Day/Night"</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"c"</span> <span class="ot">=</span> <span class="st">" Prior Day # </span><span class="sc">\n</span><span class="st"> of Motor Vehicle Thefts"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">outcome =</span> <span class="st">"s"</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>),<span class="at">text =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="at">use_labels =</span> <span class="st">"label"</span>)<span class="sc">+</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_dag</span>()<span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">caption =</span> <span class="st">"Prop. indicates the proportion of Black Drivers stopped."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(suncalc)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sunlight_times <span class="ot">&lt;-</span> <span class="fu">getSunlightTimes</span>(<span class="at">date =</span><span class="fu">as.Date</span>(<span class="fu">as.Date</span>(<span class="st">"2021-01-01"</span>)<span class="sc">:</span><span class="fu">as.Date</span>(<span class="st">"2021-12-31"</span>),<span class="at">origin =</span> <span class="st">"1970-01-01"</span>) ,<span class="at">lat =</span><span class="fl">39.9526</span> ,<span class="at">lon =</span> <span class="fl">75.1652</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tibble</span>()</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>incidents_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://phl.carto.com/api/v2/sql?filename=incidents_part1_part2&amp;format=csv&amp;q=SELECT%20*%20,%20ST_Y(the_geom)%20AS%20lat,%20ST_X(the_geom)%20AS%20lng%20FROM%20incidents_part1_part2%20WHERE%20dispatch_date_time%20%3E=%20%272021-01-01%27%20AND%20dispatch_date_time%20%3C%20%272022-01-01%27"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="section-3-r-programming-and-packaging." class="level1">
+<h1>Section 3: R programming and packaging.</h1>
+<section id="task-3" class="level2">
+<h2 class="anchored" data-anchor-id="task-3">Task 3</h2>
+<p>Within the DATA Lab, we rely on developing internal tooling in order to ensure that members of the lab have access to reliable tools to generate reports, accurate calculations, and generally more reliable code. Among the internal tooling we work on are the development of R packages.</p>
+<p>Assume we had the following function (which does not work as is), and we would like to build a package around it to count incidents data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>count_distinct_incidents <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">incidents_data =</span> <span class="cn">NULL</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">dc_val =</span> <span class="cn">NULL</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">grouping_var =</span> <span class="cn">NULL</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                     <span class="at">name_of_summary =</span> <span class="cn">NULL</span>){</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(grouping_var) <span class="sc">|&gt;</span> </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarize</span>(<span class="at">name_of_summary =</span> <span class="fu">length</span>(<span class="fu">unique</span>(dc_val)))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol type="1">
+<li>Identify errors within the function and rectify them.</li>
+</ol>
+<ul>
+<li>Employ defensive programming practices as may be useful for future users.</li>
+<li>Provide for more flexibility by accommodating more than 1 grouping variable.</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Use Roxygen2 formatting to fully document the file as if you were preparing for it to be included in a package for distribution.</p></li>
+<li><p>using either testthat or tinytest, design tests to ensure that the function operates as you expect it to.</p></li>
+</ol>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

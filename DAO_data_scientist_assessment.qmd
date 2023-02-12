@@ -1,0 +1,141 @@
+---
+title: "Data Scientist Assessment"
+format: html
+---
+
+# Instructions
+
+This is a skills assessment for the Data Scientist position with the [DATA Lab](https://phillyda.org/data-lab/) in the [Philadelphia District Attorney's Office](https://phillyda.org/).  
+
+If within your skill set, respond to all prompts that you have experience with. While we provide these prompts to guide our decision on eligible candidates, this is not the only tool that we will use to make a decision.
+
+Please feel free to make decisions and take liberties about format, design, and utility based on your personal preferences; this reflects the flexibility and independence you will have in responding to requests in this position.
+
+Your answers should be written in R code that we would be able to load and run. We use RMarkdown and Quarto frequently, and so demonstrating utility of one of those would be useful as well. Your submission does not need to stand alone and "speak for itself" as you will have the opportunity to explain it during the interview.
+
+Your response should be submitted the day before your final interview. 
+
+## Scope
+
+We expect this to take around 3-4 hours of your time. 
+
+If you have any problems with completing these tasks, please email [Wes Weaver (wes.weaver@phila.gov)](mailto:wes.weaver@phila.gov). 
+
+## Evaluation
+
+During the final interview, you will be asked to show your submitted responses and explain the process you took in performing this assessment. 
+
+Some questions do not have single "right" answers, and the final output format or deep understanding of the data is not of critical importance. Through this task, we are most interested in your ability to:
+
+* Demonstrate use of common programmatic structures in R, including functions and tidy evaluation. 
+* Demonstrate your ability to design and explain research design.
+* Understand how to convert theoretical models and convert them into statistical models.
+
+
+# Section 1: Research Design
+This section assesses each candidate's understanding of relevant research design as associated with the criminal legal system
+
+## Task 1: 
+> There is published literature which suggests that housing improvements can reduce the number of criminal incidents in a given neighborhood. Assume that we would like to assess the effect of housing improvements on the number of shootings in a given neighborhood. Briefly describe how you would create a research project that assesses the impact of housing improvements and the reduction in shootings. In your answer, be sure to include a discussion of the following:
+
+  1) which research design(s) might be appropriate to understand the causal relationship (if any) between housing improvements and shootings.
+  2) What method(s) would you consider or plan to use to investigate these questions?
+  3) What limitations do you foresee in such an analsyis? Are there complementary research designs that could be conducted to mitigate them?
+  
+# Section 2: Theory to Practice
+## Task 2:
+> There is a large body of literature surrounding racial bias within the criminal legal system. Particularly, there is a robust literature related to the presence of racial bias (or lack thereof) when examining police stops and behavior. Within this task, you will be exploring whether racial bias exists within police **vehicle** search behavior in Philadelphia for 2021. Particularly, you will be assessing the impact race has on an individual's likelihood to be searched. 
+
+1) Operating on the following DAG, construct an appropriate regression model using stop data from OpenDataPhilly. For your convenience, code to load the Philadelphia stop question and frisk data is provided below. 
+
+```{r}
+#| label: problem-set2
+#| eval: false
+
+  
+library(tidyverse)
+library(ggdag)
+coords <- tibble::tribble(
+  ~name, ~x,~y,
+  "searched", 1,1,
+  "race", 0,0,
+  "location",0,1
+)
+ggdag(dagify(searched~race,
+             race~location,
+             searched~location,
+             outcome = "searched",
+             labels = c("searched" = "searched",
+                        "race" = "race of\n driver stopped",
+                        "location" = "district\n occurred"),coords = coords),
+      text = FALSE,
+      use_labels = "label")+ 
+  theme_dag()
+
+# PPD stops data for 2021.
+philadelphia_stops <- read_csv("https://phl.carto.com/api/v2/sql?filename=car_ped_stops&format=csv&skipfields=cartodb_id,the_geom,the_geom_webmercator&q=SELECT%20*,%20ST_Y(the_geom)%20AS%20lat,%20ST_X(the_geom)%20AS%20lng%20FROM%20car_ped_stops%20WHERE%20datetimeoccur%20%3E=%20%272021-01-01%27")
+
+```
+
+2) What comments would you have about the design or potential to make inferences from this model?
+
+3) An issue in the above DAG is that it ignored stop behavior for the police for the purpose of inference. Within the literature surrounding racial bias in policing, some researchers note issues in operationalizing racial bias in policing (See [Knox,Lowe, and Mummolo, 2020](https://www.cambridge.org/core/journals/american-political-science-review/article/administrative-records-mask-racially-biased-policing/66BC0F9998543868BB20F241796B79B8) if interested). One approach proposed by  [Grogger and Ridgeway, 2006](https://www.rand.org/content/dam/rand/pubs/reprints/2007/RAND_RP1253.pdf) addresses this by understanding the difference between people stopped/searched during the day vs at night. Simplified, if the proportion of stops conducted towards a certain racial group differs from the proportion of stops conducted towards that racial group at night, then there is evidence of racial bias. 
+
+Using the following DAG, generate an appropriate regression model with the veil of darkness in mind. For your convenience, datetimes for sunset and dusk as well as code to load the OpenDataPhilly criminal incidents data is provided. In your response, also explain your reasoning into the inclusion/exclusion of control variables.
+
+```{r}
+#| label: dag
+#| eval: false
+ggdag(dagify(
+  s ~ d,
+  di~d,
+  di~c,
+  s ~di,
+  s ~ c,
+  labels = c(
+    "s" = "Prop. of Black \n drivers stopped",
+    "di" = "Police \n District",
+    "d" = "Day/Night",
+    "c" = " Prior Day # \n of Motor Vehicle Thefts"
+  ),
+  outcome = "s"
+),text = FALSE,
+use_labels = "label")+
+  theme_dag()+
+  labs(caption = "Prop. indicates the proportion of Black Drivers stopped.")
+```
+
+```{r}
+#| eval: false
+
+library(suncalc)
+sunlight_times <- getSunlightTimes(date =as.Date(as.Date("2021-01-01"):as.Date("2021-12-31"),origin = "1970-01-01") ,lat =39.9526 ,lon = 75.1652) |> 
+  as_tibble()
+
+incidents_data <- read_csv("https://phl.carto.com/api/v2/sql?filename=incidents_part1_part2&format=csv&q=SELECT%20*%20,%20ST_Y(the_geom)%20AS%20lat,%20ST_X(the_geom)%20AS%20lng%20FROM%20incidents_part1_part2%20WHERE%20dispatch_date_time%20%3E=%20%272021-01-01%27%20AND%20dispatch_date_time%20%3C%20%272022-01-01%27")
+```
+
+# Section 3: R programming and packaging.
+## Task 3
+Within the DATA Lab, we rely on developing internal tooling in order to ensure that members of the lab have access to reliable tools to generate reports, accurate calculations, and generally more reliable code. Among the internal tooling we work on are the development of R packages.
+
+Assume we had the following function (which does not work as is), and we would like to build a package around it to count incidents data.
+
+```{r,eval=FALSE}
+count_distinct_incidents <- function(incidents_data = NULL,
+                                     dc_val = NULL,
+                                     grouping_var = NULL,
+                                     name_of_summary = NULL){
+  data |> 
+    group_by(grouping_var) |> 
+    summarize(name_of_summary = length(unique(dc_val)))
+}
+```
+
+1) Identify errors within the function and rectify them.
+- Employ defensive programming practices as may be useful for future users.
+- Provide for more flexibility by accommodating more than 1 grouping variable.
+
+2) Use Roxygen2 formatting to fully document the file as if you were preparing for it to be included in a package for distribution.
+
+3) using either testthat or tinytest, design tests to ensure that the function operates as you expect it to.
